@@ -1,8 +1,8 @@
 'use strict'
 
-let log4js = require('log4js');
-let util = require('util');
-let date = require('./date_format.js');
+const log4js = require('log4js');
+const util = require('util');
+const date = require('./date_format.js');
 
 // date, addr, method, url, HTTP/version, content-length, user-agent
 const DEFAULT = "%s : %s %s %s -- %s %s\n    HTTP/%s %s";

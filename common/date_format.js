@@ -5,13 +5,13 @@ exports.DATETIME_FORMAT = "dd MM yyyy hh:mm:ss.SSS";
 exports.ABSOLUTETIME_FORMAT = "hh:mm:ss.SSS";
 
 function padWithZeros(vNumber, width) {
-  var numAsString = vNumber + "";
+  let numAsString = vNumber + "";
   while (numAsString.length < width) {
     numAsString = "0" + numAsString;
   }
   return numAsString;
 }
-  
+
 function addZero(vNumber) {
   return padWithZeros(vNumber, 2);
 }
@@ -23,9 +23,9 @@ function addZero(vNumber) {
  */
 function offset(date) {
   // Difference to Greenwich time (GMT) in hours
-  var os = Math.abs(date.getTimezoneOffset());
-  var h = String(Math.floor(os/60));
-  var m = String(os%60);
+  let os = Math.abs(date.getTimezoneOffset());
+  let h = String(Math.floor(os/60));
+  let m = String(os%60);
   if (h.length == 1) {
     h = "0" + h;
   }
@@ -36,23 +36,23 @@ function offset(date) {
 }
 
 exports.asString = function(/*format,*/ date) {
-  var format = exports.ISO8601_FORMAT;
+  let format = exports.ISO8601_FORMAT;
   if (typeof(date) === "string") {
     format = arguments[0];
     date = arguments[1];
   }
 
-  var vDay = addZero(date.getDate());
-  var vMonth = addZero(date.getMonth()+1);
-  var vYearLong = addZero(date.getFullYear());
-  var vYearShort = addZero(date.getFullYear().toString().substring(2,4));
-  var vYear = (format.indexOf("yyyy") > -1 ? vYearLong : vYearShort);
-  var vHour  = addZero(date.getHours());
-  var vMinute = addZero(date.getMinutes());
-  var vSecond = addZero(date.getSeconds());
-  var vMillisecond = padWithZeros(date.getMilliseconds(), 3);
-  var vTimeZone = offset(date);
-  var formatted = format
+  let vDay = addZero(date.getDate());
+  let vMonth = addZero(date.getMonth()+1);
+  let vYearLong = addZero(date.getFullYear());
+  let vYearShort = addZero(date.getFullYear().toString().substring(2,4));
+  let vYear = (format.indexOf("yyyy") > -1 ? vYearLong : vYearShort);
+  let vHour  = addZero(date.getHours());
+  let vMinute = addZero(date.getMinutes());
+  let vSecond = addZero(date.getSeconds());
+  let vMillisecond = padWithZeros(date.getMilliseconds(), 3);
+  let vTimeZone = offset(date);
+  let formatted = format
     .replace(/dd/g, vDay)
     .replace(/MM/g, vMonth)
     .replace(/y{1,4}/g, vYear)

@@ -1,12 +1,14 @@
 
-const React = require('react');
+"use strict";
 
-const Tab1 = React.createClass({
+import React from 'react';
+
+class Tab1 extends React.Component {
   render() {
     return (
       <div className='tab-1'>Tab1</div>
     );
   }
-});
+}
 
-module.exports = Tab1;
+export default Tab1;

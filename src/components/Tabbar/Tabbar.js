@@ -1,12 +1,11 @@
 
 "use strict";
 
-const React = require('react');
-const tabs = require('../../constants/AppConstants').tabs;
-const AppStore = require('../../stores/AppStore');
+import React from 'react';
+import {tabs} from '../../constants/AppConstants';
+import AppStore from '../../stores/AppStore';
 
-const Tabbar = React.createClass({
-
+class Tabbar extends React.Component {
   render() {
     let tabArray = [];
     let ctx = this;
@@ -26,6 +25,6 @@ const Tabbar = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Tabbar;
+export default Tabbar;

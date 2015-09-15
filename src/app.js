@@ -1,9 +1,9 @@
 
 "use strict";
 
-const React = require('react');
-const App = require('./components/App/App');
-const Pace = require('pace');
+import React from 'react';
+import App from './components/App/App';
+import Pace from 'pace';
 
 Pace.on('done', () => {
   React.render(

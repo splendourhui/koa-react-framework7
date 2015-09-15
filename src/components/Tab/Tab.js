@@ -1,12 +1,12 @@
 
 "use strict";
 
-const React = require('react');
-const tabs = require('../../constants/AppConstants').tabs;
-const Navbar = require('../Navbar/Navbar');
-const {Tab1, Tab2, Tab3} = require('../TabContents');
+import React from 'react';
+import {tabs} from '../../constants/AppConstants';
+import Navbar from '../Navbar/Navbar';
+import {Tab1, Tab2, Tab3} from '../TabContents';
 
-const Tab = React.createClass({
+class Tab extends React.Component {
   render() {
     let content;
     let navName;
@@ -45,6 +45,6 @@ const Tab = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Tab;
+export default Tab;

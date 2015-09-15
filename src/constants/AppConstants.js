@@ -1,7 +1,7 @@
 
-const keyMirror = require('keymirror');
+import keyMirror from 'keymirror';
 
-module.exports = {
+export default {
   keys: keyMirror({
     APP_CHANGE_ACTIVE_TAB: null
   }),

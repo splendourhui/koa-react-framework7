@@ -1,9 +1,9 @@
 
 "use strict";
 
-const React = require('react');
+import React from 'react';
 
-const Navbar = React.createClass({
+class Navbar extends React.Component {
   render()  {
     return (
       <div className="navbar">
@@ -13,6 +13,6 @@ const Navbar = React.createClass({
       </div>
     );
   }
-});
+}
 
-module.exports = Navbar;
+export default Navbar;

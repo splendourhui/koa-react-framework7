@@ -1,9 +1,9 @@
 
 "use strict";
 
-const AppDispatcher = require('../dispatchers/AppDispatcher');
-const EventEmitter = require('events').EventEmitter;
-const AppConstants = require('../constants/AppConstants');
+import AppDispatcher from '../dispatchers/AppDispatcher';
+import {EventEmitter} from 'events';
+import AppConstants from '../constants/AppConstants';
 
 let CHANGE_EVENT = 'change';
 let _values = {};
@@ -43,4 +43,4 @@ AppDispatcher.register((action) => {
   }
 });
 
-module.exports = store;
+export default store;
