@@ -36,7 +36,8 @@ app.use(function *(next) {
   let start = new Date;
   yield next;
   let ms = new Date - start;
-  console.log('%s : %s %s - %sms', this.cookies.get('username'), this.method, this.url, ms);
+  console.log(`${this.cookies.get('username')} :`
+    +` ${this.method} ${this.url} - ${ms}ms`);
 });
 
 require('./routes')(router);
@@ -45,5 +46,5 @@ app.use(router.routes());
 app = module.exports = http.createServer(app.callback());
 if (!module.parent) {
   app.listen(config.port);
-  console.log('$ open http://127.0.0.1:' + config.port);
+  console.log(`$ open http://127.0.0.1:${config.port}`);
 }

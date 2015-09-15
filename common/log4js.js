@@ -57,10 +57,3 @@ module.exports = function(opts){
     }
   }
 }
-
-
-// where to get status, referer
-// add more info
-// 解析配置选项, 创建file logger, 支持log 内容配置
-// 从其他middleware中可以获取到 logger
-// 日志格式可参看 log4js的 connetct-logger
