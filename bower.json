@@ -1,0 +1,11 @@
+{
+  "name": "six",
+  "dependencies": {
+    "react": "0.13.3",
+    "react-router": "0.13.3",
+    "framework7": "1.2.0",
+    "ionicons": "*",
+    "zepto": "1.1.6",
+    "lodash": "2.4.1"
+  }
+}

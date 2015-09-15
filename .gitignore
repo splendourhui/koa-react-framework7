@@ -1,0 +1,9 @@
+node_modules/
+bower_components/
+*.log
+logs/
+build/
+.idea
+public/js
+public/css
+public/lib/

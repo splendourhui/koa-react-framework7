@@ -1,0 +1,22 @@
+
+doctype html
+html
+   head(lang='en')
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no')
+      title Koa-React
+      link(href='/pace.theme.css' rel='stylesheet')
+      script(data-pace-options='{ "ajax": false }' src='/pace.js')
+      if isAndroid
+         link(href='/lib/framework7/dist/css/framework7.material.min.css' rel='stylesheet')
+      else
+         link(href='/lib/framework7/dist/css/framework7.ios.min.css' rel='stylesheet')
+      link(href='/css/bundle.css" rel="stylesheet')
+      link(href='/lib/ionicons/css/ionicons.min.css' rel='stylesheet')
+   body(class=isAndroid ? "android" : "ios")
+      script(src='/lib/lodash/dist/lodash.min.js')
+      script(src='/lib/zepto/zepto.min.js')
+      script(src='/lib/react/react.min.js')
+      script(src='/lib/react-router/build/umd/ReactRouter.min.js')
+      script(src='/lib/framework7/dist/js/framework7.min.js')
+      script(src='/js/bundle.js')
