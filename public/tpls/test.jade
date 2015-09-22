@@ -4,11 +4,10 @@ if !isAndroid
       .left.sliding
         a.link.back(href='#')
           i.icon.icon-back
-          span= prev
-      .center.sliding= title
+          span #{prev}
+      .center.sliding #{title}
   .pages.navbar-through
-    .page
-      .page-content#details
+    .page.no-toolbar#details(data-page="#{name}")
 else
   .page
     .navbar
@@ -16,5 +15,5 @@ else
         .left
           a.link.back.icon-only(href='#')
             i.icon.icon-back
-        .center= title
+        .center #{title}
     .page-content#details

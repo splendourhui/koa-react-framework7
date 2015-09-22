@@ -8,7 +8,7 @@ class Tab1 extends React.Component {
     return (
       <div className='tab-1'>
         <p>
-          <a href="pages/test" className="link">Test</a>
+          <a href="pages/test?title=Message" className="link">Messages Test</a>
         </p>
       </div>
     );
