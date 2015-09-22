@@ -1,6 +1,3 @@
-/**
- * Created by SamChan on 15/9/9.
- */
 
 "use strict";
 

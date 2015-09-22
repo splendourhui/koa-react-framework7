@@ -33,11 +33,13 @@ gulp.task('default', function () {
   gulp.watch([
     './src/*.js',
     './src/*/*.js',
-    './src/*/*/*.js'
+    './src/*/*/*.js',
+    './src/*/*/*/*.js'
   ], ['webpack_client']);
   gulp.watch([
     './src/*.less',
     './src/*/*.less',
-    './src/*/*/*.less'
+    './src/*/*/*.less',
+    './src/*/*/*/*.less'
   ], ['stylesheets']);
 });

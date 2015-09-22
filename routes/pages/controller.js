@@ -1,8 +1,6 @@
-/**
- * Created by SamChan on 15/9/9.
- */
 
 "use strict";
+
 const jade = require('jade');
 const path = require('path');
 

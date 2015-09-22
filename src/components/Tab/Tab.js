@@ -31,17 +31,8 @@ class Tab extends React.Component {
       }
     });
     return (
-      <div id={this.props.name} className='view tab'>
-        <Navbar name={navName}/>
-        <div className='pages navbar-fixed'>
-          <div data-page={'page-' + this.props.name} className="page">
-            <div className="page-content">
-              <div className="content-block">
-                {content}
-              </div>
-            </div>
-          </div>
-        </div>
+      <div id={this.props.name} className='tab'>
+        {content}
       </div>
     );
   }

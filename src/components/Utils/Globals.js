@@ -4,6 +4,8 @@
 class Global {
   constructor() {
     this['app'] = null;
+    this['mainView'] = null;
+    this['isAndroid'] = null;
   }
 
   getApp() {
@@ -13,8 +15,21 @@ class Global {
     this['app'] = obj;
   }
 
+  getMainView() {
+    return this['mainView'];
+  }
+  setMainView(obj) {
+    this['mainView'] = obj;
+  }
+
+  getIsAndroid() {
+    return this['isAndroid'];
+  }
+  setIsAndroid(obj) {
+    this['isAndroid'] = obj;
+  }
 }
 
-let globels = new Global();
+let globals = new Global();
 
-export default globels;
+module.exports = globals;

@@ -17,6 +17,11 @@ let app = koa();
  */
 app.use(middlewares.rt());
 
+app.use(middlewares.compress({
+  threshold: 2048,
+  flush: require('zlib').Z_SYNC_FLUSH
+}));
+
 /**
  * static file server
  */

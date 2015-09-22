@@ -1,0 +1,20 @@
+if !isAndroid
+  .navbar
+    .navbar-inner
+      .left.sliding
+        a.link.back(href='#')
+          i.icon.icon-back
+          span= prev
+      .center.sliding= title
+  .pages.navbar-through
+    .page
+      .page-content#details
+else
+  .page
+    .navbar
+      .navbar-inner
+        .left
+          a.link.back.icon-only(href='#')
+            i.icon.icon-back
+        .center= title
+    .page-content#details
