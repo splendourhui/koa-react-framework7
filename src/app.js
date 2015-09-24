@@ -6,8 +6,9 @@ import $$ from 'dom7';
 import Pace from 'pace';
 
 import App from './components/App/App';
+import Message from './components/Message/Message';
+import MessageBar from './components/Message/MessageBar';
 import globals from './components/Utils/Globals';
-import Test from './components/Message/Test';
 
 globals.setIsAndroid(navigator.userAgent.toLowerCase().indexOf('android') >= 0);
 
@@ -16,8 +17,12 @@ $$(document).on('pageBeforeInit', (e) => {
   switch (page.name) {
     case 'message':
       React.render(
-        <Test />,
-        document.getElementById('message')
+        <Message />,
+        document.getElementById('message-content')
+      );
+      React.render(
+        <MessageBar />,
+        document.getElementById('messagebar')
       );
       break;
   }
