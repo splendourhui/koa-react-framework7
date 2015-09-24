@@ -6,6 +6,7 @@ html
       meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no')
       title Koa-React
       link(href='/pace.theme.css' rel='stylesheet')
+      link(href='/css/bundle.css' rel='stylesheet')
       script(data-pace-options='{ "ajax": false }' src='/pace.js')
       
       if isAndroid
@@ -14,9 +15,8 @@ html
          link(href='/lib/framework7/dist/css/framework7.ios.min.css' rel='stylesheet')
          
       link(href='/lib/ionicons/css/ionicons.min.css' rel='stylesheet')
-      link(href='/css/bundle.css" rel="stylesheet')
    body
-      #app(class=isAndroid ? "android" : "ios" style="height:inherit")
+      #app(class=isAndroid ? "android" : "ios")
       script(src='/lib/lodash/dist/lodash.min.js')
       script(src='/lib/zepto/zepto.min.js')
       script(src='/lib/react/react.min.js')

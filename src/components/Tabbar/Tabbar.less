@@ -1,0 +1,33 @@
+body {
+  .android {
+    .toolbar.tabbar {
+      top: auto;
+      bottom: 0;
+      overflow: visible;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: auto;
+        right: auto;
+        height: 1px;
+        width: 100%;
+        background-color: #c4c4c4;
+        display: block;
+        z-index: 15;
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+      }
+
+      .toolbar-inner {
+        overflow: visible;
+      }
+
+      a {
+        overflow: visible;
+      }
+    }
+  }
+}

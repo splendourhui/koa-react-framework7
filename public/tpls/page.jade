@@ -5,15 +5,15 @@ if !isAndroid
         a.link.back(href='#')
           i.icon.icon-back
           span #{prev}
-      .center.sliding #{title}
+      .center.sliding title
   .pages.navbar-through
-    .page.no-toolbar#details(data-page="#{name}")
+    .page.no-toolbar(data-page='#{pageName}' id='#{pageName}' data-id='#{id}')
 else
-  .page
+  .page(data-page='#{pageName}' data-id='#{id}')
     .navbar
       .navbar-inner
         .left
           a.link.back.icon-only(href='#')
             i.icon.icon-back
-        .center #{title}
-    .page-content#details
+        .center title
+    .page-content(id='#{pageName}')

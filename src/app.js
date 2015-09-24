@@ -14,10 +14,10 @@ globals.setIsAndroid(navigator.userAgent.toLowerCase().indexOf('android') >= 0);
 $$(document).on('pageBeforeInit', (e) => {
   let page = e.detail.page;
   switch (page.name) {
-    case 'test':
+    case 'message':
       React.render(
         <Test />,
-        document.getElementById('details')
+        document.getElementById('message')
       );
       break;
   }

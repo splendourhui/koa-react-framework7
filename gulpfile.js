@@ -18,7 +18,8 @@ gulp.task('stylesheets', function () {
   return gulp.src([
     './src/*.less',
     './src/*/*.less',
-    './src/*/*/*.less'
+    './src/*/*/*.less',
+    './src/*/*/*/*.less'
   ])
     .pipe(less().on('error', gutil.log))
     .pipe(concatCss("bundle.css"))
