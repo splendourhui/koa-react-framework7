@@ -5,7 +5,7 @@ if !isAndroid
         a.link.back(href='#')
           i.icon.icon-back
           span #{prev}
-      .center.sliding title
+      .center.sliding #{title}
   .pages
     .page.no-toolbar(data-page='#{pageName}' id='#{pageName}' data-id='#{id}')
       .toolbar.messagebar(id='messagebar')
@@ -18,7 +18,7 @@ else
         .left
           a.link.back.icon-only(href='#')
             i.icon.icon-back
-        .center title
+        .center #{title}
     .toolbar.messagebar(id='messagebar')
     .page-content.messages-content(id='message-content')
     .page-content(id='#{pageName}')

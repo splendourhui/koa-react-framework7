@@ -13,7 +13,8 @@ class Tabbar extends React.Component {
       tabArray.push(
         <a href={'#' + tab.name}
           className={ctx.props.current === tab.name? 'tab-link active' : 'tab-link'}>
-          <i className="icon ion-ionic" />
+          <i className={tab.tabIcon} />
+          <span className='tabbar-label'>{tab.tabName}</span>
         </a>
       );
     });
