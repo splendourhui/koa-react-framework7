@@ -29,6 +29,10 @@ class Message extends React.Component {
     MessageStore.addChangeListener(this.onChange.bind(this));
   }
 
+  componentWillUnmount() {
+    MessageStore.removeChangeListener(this.onChange);
+  }
+
   loadTestMessages() {
     MessageAction.loadTestMessages((data) => {
       this.setState({

@@ -35,6 +35,6 @@
   },
   "scripts": {
     "build": "node --harmony `which gulp`",
-    "start": "supervisor --harmony app.js"
+    "start": "supervisor --harmony -- app.js 3033"
   }
 }

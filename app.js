@@ -51,6 +51,11 @@ app.use(router.routes());
 
 app = module.exports = http.createServer(app.callback());
 if (!module.parent) {
-  app.listen(config.port);
-  console.log(`$ open http://127.0.0.1:${config.port}`);
+  let port = process.argv[2] || config.port;
+  app.listen(port);
+  console.log(`$ Server is listening on port:${port}`);
 }
+
+process.on('exit', (code) => {
+  console.log(`$ About to exit with code:${code}`);
+});

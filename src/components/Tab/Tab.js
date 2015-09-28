@@ -9,7 +9,6 @@ import {Tab1, Tab2, Tab3} from '../TabContents';
 class Tab extends React.Component {
   render() {
     let content;
-    let navName;
     let ctx = this;
     switch(this.props.name){
       case 'tab1':
@@ -25,13 +24,12 @@ class Tab extends React.Component {
         content = <Tab2 />;
         break;
     }
-    tabs.forEach((tab) => {
-      if(tab.name === ctx.props.name) {
-        navName = tab.navName;
-      }
-    });
+    let active = '';
+    if (this.props.name === this.props.current) {
+      active = 'active';
+    }
     return (
-      <div id={this.props.name} className='tab'>
+      <div id={this.props.name} className={`tab ${active}`}>
         {content}
       </div>
     );

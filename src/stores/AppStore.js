@@ -6,7 +6,9 @@ import {EventEmitter} from 'events';
 import AppConstants from '../constants/AppConstants';
 
 let CHANGE_EVENT = 'change';
-let _values = {};
+let _values = {
+  activeTab: 'tab1'
+};
 
 function setActiveTab(tabName) {
   _values.activeTab = tabName;
